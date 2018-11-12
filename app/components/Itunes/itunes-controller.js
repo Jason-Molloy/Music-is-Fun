@@ -10,12 +10,10 @@ function drawSongs(songs) {
   let template = ''
   songs.forEach(song => {
     template += `
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col card">
-          <div class="row">
+        <div class="col-12">
+          <div class="row d-flex">
             <img src="${song.albumArt}">
-            <h3>${song.title} - ${song.artist}</h3>
+            <h3 class="songTitle">${song.title} - ${song.artist}</h3>
           </div>
           <div class="row">
             <div class="col-10">
@@ -28,8 +26,6 @@ function drawSongs(songs) {
             </div>
           </div>
         </div>
-      </div>  
-    </div>
     `
   })
   document.getElementById("songs").innerHTML = template
